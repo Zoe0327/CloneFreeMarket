@@ -2,7 +2,6 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ItemController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,8 +13,6 @@ use App\Http\Controllers\ItemController;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-
-Route::get('/items', [ItemController::class, 'apiIndex']);
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
